@@ -1,0 +1,12 @@
+//settings files
+@import "sass/reset";
+@import "sass/fonts";
+@import "sass/variables";
+@import "sass/base";
+
+// Pages
+@import "../components/Header/Header";
+@import "../components/Home/Home";
+
+// components
+@import "../components/ArrowLink/ArrowLink";

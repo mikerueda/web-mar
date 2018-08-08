@@ -1,0 +1,93 @@
+.arrowLink {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  cursor: pointer;
+
+  div {
+    overflow: hidden;
+    display: block;
+    line-height: 32px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 0 $gutter;
+    span {
+      color: $red;
+      position: relative;
+      transition: $transition;
+    }
+  }
+  &:before, &:after {
+    content: '';
+    width: 40px;
+    display: block;
+    position: absolute;
+    transition: $transition;
+    border-bottom: 1px solid $red;
+  }
+  &:before {
+    left: 50%;
+    transform-origin: bottom left;
+  }
+  &:after {
+    right: 50%;
+    transform-origin: bottom right;
+  }
+
+  &.bottom {
+    bottom: 30px;
+    padding-bottom: $gutter;
+    span {
+      top: 32px;
+    }
+    &:before, &:after {
+      top: 100%;
+    }
+    &:before {
+      transform: rotate(-30deg);
+    }
+    &:after {
+      transform: rotate(30deg);
+    }
+  }
+
+  &.top {
+    top: 110px;
+    padding-top: $gutter;
+    span{
+      bottom: 32px;
+    }
+    &:before, &:after {
+      bottom: 100%;
+    }
+    &:before {
+      transform: rotate(30deg);
+    }
+    &:after {
+      transform: rotate(-30deg);
+    }
+  }
+
+  &.bottom:hover {
+    div {
+      span {
+        top: 0;
+      }
+    }
+    &:before, &:after {
+      top: 65%;
+      transform: rotate(0deg);
+    }
+  }
+  &.top:hover {
+    div {
+      span {
+        bottom: 0;
+      }
+    }
+    &:before, &:after {
+      bottom: 65%;
+      transform: rotate(0deg);
+    }
+  }
+}

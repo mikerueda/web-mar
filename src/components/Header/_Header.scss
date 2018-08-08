@@ -1,0 +1,45 @@
+header {
+  nav{
+    overflow: hidden;
+    border-bottom: 1px solid $red
+  }
+
+  .logoLink {
+    float: left;
+    font-family: $lora;
+    font-size: 24px;
+    line-height: 48px;
+    margin: $gutter 0;
+  }
+
+  .mainMenu {
+    float: right;
+    li {
+      float: left;
+      margin-left: $gutter/2;
+      a {
+        display: block;
+        float: left;
+        line-height: 36px;
+        margin: 22px 0;
+        padding: 0 $gutter;
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: 1px;
+        font-weight: $regular;
+        border-radius: 4px;
+        transition: $transition;
+
+        &.boxed {
+          border: 1px solid $red;
+          box-sizing: border-box;
+        }
+
+        &:hover {
+          background-color: $red;
+          color: $white;
+        }
+      }
+    }
+  }
+}

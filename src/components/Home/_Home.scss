@@ -1,0 +1,12 @@
+.home {
+  background-color: $black;
+
+  .description {
+    color: $white;
+    opacity: 0.8;
+    font-size: 22px;
+    line-height: 28px;
+    width: 100%;
+    max-width: 620px;
+  }
+}
